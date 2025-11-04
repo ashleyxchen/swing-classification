@@ -11,7 +11,7 @@ from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 
 from caas_jupyter_tools import display_dataframe_to_user
 
-csv_path = "/mnt/data/backhand_raw.csv"
+csv_path = "../raw_sessions/backhand_raw.csv"
 df = pd.read_csv(csv_path)
 
 # columns
