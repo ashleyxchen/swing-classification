@@ -9,9 +9,10 @@ import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation, PillowWriter
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 
-from caas_jupyter_tools import display_dataframe_to_user
+# from caas_jupyter_tools import display_dataframe_to_user
 
-csv_path = "../raw_sessions/backhand_raw.csv"
+# csv_path = "../raw_sessions/backhand_raw.csv"
+csv_path = "../raw_sessions/wrist_angle_test/angle_test_wrist.csv"
 df = pd.read_csv(csv_path)
 
 # columns
@@ -215,7 +216,7 @@ def update(i):
 
 ani = FuncAnimation(fig, update, frames=len(quats_sub), interval=10, blit=False)
 
-out_path = "/mnt/data/forearm_backhand.gif"
+out_path = "forearm_wrist_angle_test_wrist.gif"
 ani.save(out_path, writer=PillowWriter(fps=24))
 plt.close(fig)
 
